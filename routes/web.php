@@ -21,3 +21,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/oauth/{service}', 'Auth\LoginController@Oauth');
 Route::get('/callback/{service}', 'Auth\LoginController@OauthCallback')->name('auth.google.callback');
+
+Route::get('/contacts', 'UserController@get');
+Route::get('/conversation/{id}', 'UserController@getMessagesFor');
